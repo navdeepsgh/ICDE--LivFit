@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <style>
+      #muscleGain {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      #muscleGain td,
+      #muscleGain th {
+        /* border: 1px solid black; */
+        padding: 8px;
+        text-align: left;
+      }
+
+      #muscleGain tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      #muscleGain tr:hover {
+        background-color: #ddd;
+      }
+
+      #muscleGain th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        background-color: #186d79b7;
+        color: white;
+      }
+
+      img {
+        width: 350px;
+
+        margin-right: 100px;
+        object-fit: cover;
+      }
+
+      .center {
+        display: block;
+
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #button {
+        background-color: #186d79b7;
+        border: none;
+        color: white;
+        padding: 8px 12px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 4px 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="http://127.0.0.1:5000/viewexercises/"
+                  >View Exercises</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:5000/customerprofile"
+                  >Back</a
+                >
+              </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h1 id="muscleGain">Muscle Gain Exercises</h1>
+
+    <table id="muscleGain">
+      <tr>
+        <th>S.No.</th>
+        <th>Exercise</th>
+        <th>Procedure</th>
+        <th>Repititions</th>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>Running</td>
+        <td>
+          <ul>
+            <li>
+              For beginners, it is advised that you should start only with
+              walking or jogging slowly.
+            </li>
+            <li>After few days, when ready for next step,start by running.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Gradually increase the pace and distance</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>Push-ups</td>
+        <td>
+          <ul>
+            <li>
+              Your spine should be straight and in line with your bottom, which
+              isn't sagging.
+            </li>
+            <li>
+              Your palms are generally a little wider than your shoulders, but
+              you can go wider for a better chest workout and narrower for a
+              better arm workout.
+            </li>
+            <li>
+              In addition, you should mix in incline and decline push-ups for
+              better overall muscle growth.
+            </li>
+          </ul>
+          <img src="{{url_for('static', filename='MG 2.PNG')}}"/>
+        </td>
+        <td>
+          <ul>
+            <li>Sets: 3</li>
+            <li>Reps: 8-12</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td>Crunches</td>
+        <td>
+          <ul>
+            <li>
+              Lay on your back with your feet planted and your knees bent.
+            </li>
+            <li>
+              Supporting your neck with your hands, raise your shoulders 6-8"
+              off the ground, hold for one second, then slowly lower yourself
+              back down.
+            </li>
+            <li>
+              Immediately bounce back up, keeping your eyes on the sky and
+              making your movements slow and deliberate.
+            </li>
+          </ul>
+          <img src="{{url_for('static', filename='MG 3.PNG')}}" />
+        </td>
+        <td>
+          <ul>
+            <li>Sets: 3</li>
+            <li>Reps: 8-12</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td>Dips</td>
+        <td>
+          <ul>
+            <li>
+              For good dips, you'll need a sturdy bench, table, or chair roughly
+              1–2 feet (0.3–0.6 m) above the ground.
+            </li>
+            <li>
+              Place your hands behind you on this bench so that your butt is in
+              the air and your knees bent 90 degrees.
+            </li>
+            <li>
+              With your feet firmly on the ground, lower your butt to the ground
+              until your arms are bent at roughly 90 degrees.
+            </li>
+          </ul>
+          <img src="{{url_for('static', filename='MG 4.PNG')}}" />
+        </td>
+        <td>
+          <ul>
+            <li>Sets: 3</li>
+            <li>Reps: 15-20</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <td>5</td>
+        <td>Plank</td>
+        <td>
+          <ul>
+            <li>
+              To do one, get in push-up position. However, instead of placing
+              your palms on the ground, rest on your forearms.
+            </li>
+            <li>
+              Tighten your butt muscles and straighten your spine -- you should
+              be able to rest a broom between your neck and butt.
+            </li>
+            <li>Hold this position for one minute, rest, and repeat.</li>
+          </ul>
+          <img src="{{url_for('static', filename='MG 5.PNG')}}" />
+        </td>
+        <td>
+          <ul>
+            <li>Sets: 3</li>
+            <li>Reps: 12 per set</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+    <h2></h2>
+  </body>
+</html>
+<!-- https://www.shape.com/fitness/workouts/best-weight-loss-exercises -->

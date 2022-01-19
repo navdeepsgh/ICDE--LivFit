@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5000/">Home</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:5000/customersignup/">Customer Sign Up</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:5000/trainersignup/">Trainer Sign Up</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:5000/login/">Login</a>
+        </li>
+      </ul>
+      </ul>
+    </div>
+  </div>
+</nav>
+<h1 class="center container">Welcome to LivFit
+</h1>
+<h2 class="center container">Fighting Inactiveness</h2>
+<br>
+<br>
+<p>This application aims to build a healthy community by targeting physical inactivity and fighting sedentary routine of individuals.</p>
+<p>So, our ICDE – LivFit application tries to bridge the gap between customers and trainers so that they both can serve the cause collectively and more effectively by:</p>
+<li>Registering of customers and trainers</li>
+<li>Enabling customers with option of exercises as per requirement</li>
+<li>Allowing customers to have one on one interaction with the trainers</li>
+<li>Enabling trainers to help people and guiding with their exercise related queries</li>
+
+{% endblock %}

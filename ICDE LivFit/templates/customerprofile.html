@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Hello Customer "{{ email }}"</h1>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    {% for msg in messages %}
+    <p class="center">{{msg}}</p>
+    {% endfor %}
+{% endif %}
+{% endwith %}
+<div class="d-grid gap-2 col-6 mx-auto">
+    <button class="btn btn-primary" onclick="window.location = 'http://127.0.0.1:5000/customerprofiledetails/'" type="submit">Access Profile</button>
+    <button class="btn btn-primary" onclick="window.location = 'http://127.0.0.1:5000/viewexercises/'" type="submit">View Exercises</button>
+    <button class="btn btn-primary" onclick="window.location = 'http://127.0.0.1:5000/bookappointment/'" type="submit">Book Appointment</button>
+    <button class="btn btn-primary" onclick="window.location = 'http://127.0.0.1:5000/viewcustomerbookings/'" type="submit">View Bookings</button>
+    <button class="btn btn-primary" onclick="window.location = 'http://127.0.0.1:5000/exerciselog/'" type="submit">Exercise Log</button>
+    <button class="btn btn-primary" onclick="window.location = 'http://127.0.0.1:5000/customerassistance/'" type="submit">Customer Assistance</button>
+    <button class="btn btn-primary" onclick="window.location = 'http://127.0.0.1:5000/logout/'" type="submit">Logout</button>
+</div>
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5000/trainersignup/">Trainer Sign Up</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:5000/">Home</a>
+          </li>
+        </ul>
+        </ul>
+      </div>
+    </div>
+</nav>
+<div class="card-wrapper">
+<div class="card">
+    <h1 class="center">"Trainer Sign Up Form"</h1>
+    {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for msg in messages %}
+                <p class="center">{{msg}}</p>
+                {% endfor %}
+            {% endif %}
+    {% endwith %}
+    <form id="trainersignup-form" action="/auth/trainersignup" method="POST">
+
+        <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" minlength="3" maxlength="25" required>
+        </div>
+        <br>
+
+        <div class="md-3">
+        <label for="age" class="form-label">Age</label>
+        <input type="number" min="0" class="form-control" id="age" name="age" required>
+        </div>
+        <br>
+
+        <div class="mb-3">
+            <label for="gender" class="form-label">Gender</label>
+                <select class="form-select" id="gender" name="gender" required>
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>
+                </select>
+        </div>
+        <br>
+
+        <div class="md-3">
+            <label for="experience" class="form-label">Experience (in years)</label>
+            <input type="number" min="0" class="form-control" id="experience" name="experience" required>
+        </div>
+        <br>
+
+        <div class="md-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <br>
+            
+        <div class="md-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" minlength="6" required>
+        </div>
+        <br>
+        <br>
+
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+    <div class="info-text">
+        "Already Registered User?"
+        <a href="http://127.0.0.1:5000/login">Login</a>
+    </div>
+</div>
+</div>
+{% endblock %}

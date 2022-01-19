@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Hello Trainer "{{ email }}"</h1>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    {% for msg in messages %}
+    <p class="center">{{msg}}</p>
+    {% endfor %}
+{% endif %}
+{% endwith %}
+<div class="d-grid gap-2 col-6 mx-auto">
+    <button class="btn btn-primary" onclick="window.location = 'http://127.0.0.1:5000/trainerprofiledetails/'" type="submit">Access Profile</button>
+    <button class="btn btn-primary" onclick="window.location = 'http://127.0.0.1:5000/confirmappointments/'" type="submit">Confirm Appointments</button>
+    <button class="btn btn-primary" onclick="window.location = 'http://127.0.0.1:5000/viewtrainerbookings/'" type="submit">View Bookings</button>
+    <button class="btn btn-primary" onclick="window.location = 'http://127.0.0.1:5000/logout/'" type="submit">Logout</button>
+</div>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5000/login/">Login</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="http://127.0.0.1:5000/">Home</a>
+        </li>
+      </ul>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="card-wrapper">
+<div class="card">
+    <h1 class="center">"Enter Login Credentials"</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+            <p class="center">{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form id="login-form" action="/auth/login" method="POST">
+
+        <div class="mb-3">
+          <label for="type" class="form-label">Type of User</label>
+            <select class="form-select" id="type" name="type" required>
+                <option value="">Select</option>
+                <option value="customer">Customer</option>
+                <option value="trainer">Trainer</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="label-form">Email Address</label>
+            <input type='email' class="form-control" id="email" name="email" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="label-form">Password</label>
+            <input type='password' class="form-control" id="password" name="password" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <div class="info-text">
+      "New User?
+      "
+      <br>
+      <a href="http://127.0.0.1:5000/customersignup">Customer Sign Up</a>
+      <br>
+      <a href="http://127.0.0.1:5000/trainersignup">Trainer Sign Up</a>
+  </div>
+</div>
+</div>
+{% endblock %}
